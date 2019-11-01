@@ -180,10 +180,10 @@ if __name__ == "__main__":
 
   
 
-**标签处理方式**
+**原始训练数据乱序操作**
 
 ```python
-def create_csv(TXT_DIR=TXT_DIR):
+def create_csv(TXT_DIR=MANIFEST_DIR):
     lists = pd.read_csv(TXT_DIR,sep=r"\t",header=None)
     lists = lists.sample(frac=1)
     lists.to_csv(MANIFEST_DIR,index=None)
